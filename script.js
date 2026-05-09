@@ -22,18 +22,14 @@ console.log(operate("/",2,2));
 
 // const container = document.querySelector("#container")
 
-// const btn = document.createElement("button")
+// const btn = [1,2,3,4,5,6,7,8,9,0,".","+","-","*","/", "="]
 
-// const button = [1,2,3,4,5,6,7,8,9,0,"="]
-
-// button.forEach((item) =>{
-//     const btn = document.createElement("button")
-//     btn.textContent = item
-//     btn.style.width= "40px"
-//     btn.style.aspectRatio = "1"
-//     btn.style.margin = "5px"
-//     container.appendChild(btn)
+// btn.forEach((item)=>{
+//     const button = document.createElement("button");
+//     button.textContent = item
+//     button.style.width = "80px";
+//     button.style.fontSize = "35px";
+//     button.style.margin = "30px";
+//     button.style.marginTop = "30px"
+//     container.appendChild(button)
 // })
-
-
-
