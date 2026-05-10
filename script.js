@@ -18,18 +18,32 @@ const operate = (operator,num1,num2) =>{
     if(operator ==="/") return div(num1,num2) 
 
 }
-console.log(operate("/",2,2));
+// console.log(operate("/",2,2));
 
-// const container = document.querySelector("#container")
+ const container = document.querySelector("#container")
 
-// const btn = [1,2,3,4,5,6,7,8,9,0,".","+","-","*","/", "="]
+ const display = document.querySelector("#display");
+ display.textContent = "1234567890";
 
-// btn.forEach((item)=>{
-//     const button = document.createElement("button");
-//     button.textContent = item
-//     button.style.width = "80px";
-//     button.style.fontSize = "35px";
-//     button.style.margin = "30px";
-//     button.style.marginTop = "30px"
-//     container.appendChild(button)
-// })
+
+const clearButton = document.createElement("button");
+clearButton.textContent = "CLR";
+container.appendChild(clearButton);
+
+
+clearButton.addEventListener("click",() =>{
+    display.textContent = "0"
+})
+
+
+
+const buttons = document.querySelectorAll("button")
+buttons.forEach((button) =>{
+    button.addEventListener("click",()=>{
+
+    if(button.textContent !="+" && button.textContent !=="-" && button.textContent !=="*" && button.textContent !=="/" && button.textContent !=="=" && button.textContent !=="CLR"){
+        display.textContent += button.textContent
+    }
+    })
+
+})
