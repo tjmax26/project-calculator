@@ -23,7 +23,7 @@ const operate = (operator,num1,num2) =>{
  const container = document.querySelector("#container")
 
  const display = document.querySelector("#display");
- display.textContent = "1234567890";
+ display.textContent = "0";
 
 
 const clearButton = document.createElement("button");
@@ -60,9 +60,15 @@ current = "0"
 }
 
 if (button.textContent === "="){
+    if(num1 === undefined || operator === undefined) return;
     num2 = parseFloat(current);
     let result = operate(operator,num1,num2);
-    display.textContent = result;
+    display.textContent = +(result.toFixed(4));
+    current = "0"
+    num1 = undefined;
+    operator = undefined
+    
+    
 }
     })
  
