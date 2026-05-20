@@ -93,7 +93,7 @@ if (button.textContent === "="){
     current = "0";
     num1 = undefined;
     operator = undefined;
-    
+     
     
 }
     })
